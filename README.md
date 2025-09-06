@@ -1,75 +1,43 @@
-Group Theory in Python
+# 🔢 Group Theory in Python  
 
-This repository gathers my experiments in group theory implemented in Python.
-It contains scripts exploring modular arithmetic, cyclic groups, Euler’s totient function, and an application to RSA cryptography.
+This repository is a personal playground to explore **group theory** through Python.  
+It mixes abstract algebra (ℤ/nℤ, cyclic groups, Euler’s totient function) with practical applications such as **RSA cryptography**.  
 
-📂 Project Structure
-.
-├── group_1.py    # Basic constructions (Zn, equivalence classes, partitions, clock representation)
-├── group_2.py    # Abstract base classes for groups, additive groups of integers, generators
-├── group_3.py    # Euler's totient function, gcd, primality checks
-├── RSA.py        # RSA cryptosystem (prime generation, keys, encryption/decryption)
+---
 
-🚀 Python Scripts Overview
+## 📂 Files  
 
-group_1.py
+- **`group_1.py`**  
+  ℤ/nℤ implementation, equivalence classes, cartesian products, and clock representation.  
+  → Visualize modular arithmetic on the **unit circle** 🕒  
 
-Builds cartesian products and equivalence classes.
+- **`group_2.py`**  
+  Abstract base class `groupe` and additive group of integers.  
+  → Includes **symmetries, homomorphisms**, and cyclic subgroup generators. ⚡  
 
-Implements Zn (integers modulo n) as a Python class.
+- **`group_3.py`**  
+  Implements number theory tools:  
+  - `is_prime(n)` 🔍  
+  - `pgcd(a, b)` (gcd)  
+  - `indicatrice_euler(n)` = Euler’s φ(n) function  
+  → Useful for studying the multiplicative group (ℤ/nℤ)×.  
 
-Provides visualizations of modular classes on the unit circle.
+- **`RSA.py`**  
+  A simple **RSA cryptosystem** 🔐  
+  - Prime generation  
+  - Public/private key pair  
+  - Encryption & decryption demo  
 
-Example: viewing a clock as Z/12Z.
+---
 
-group_2.py
+## ▶️ How to Run  
 
-Defines abstract groupe and a concrete additive group groupe_Z.
+Clone the repository and run any script:  
 
-Includes methods for adding elements, computing symmetries, and homomorphisms.
-
-Implements a generator class to produce cyclic subgroups.
-
-group_3.py
-
-Implements Euler’s totient function ϕ(n).
-
-Functions: is_prime, pgcd, indicatrice_euler.
-
-Illustrates arithmetic properties used in group theory.
-
-RSA.py
-
-Implements a basic RSA cryptosystem:
-
-Prime generation
-
-Key pair creation (public/private)
-
-Encryption and decryption demo
-
-Demonstrates the link between group theory and cryptography.
-
-▶️ How to Run
-# Run RSA demo
+```bash
+# RSA demo
 python RSA.py
 
-# Visualize modular classes on the unit circle
+# Modular arithmetic visualizations
 python group_1.py
 
-
-Requirements:
-
-Python 3.x
-
-numpy
-
-matplotlib
-
-🎯 Purpose
-
-Practice Python programming alongside learning group theory.
-
-Visualize and experiment with group structures.
-
-Connect abstract algebra with real-world cryptographic applications.
