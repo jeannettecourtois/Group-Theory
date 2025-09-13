@@ -48,17 +48,37 @@ class Z_n_N_x:
     def classes_equivalences(self, value):
         self._classes_equivalences = [i for i in range(1, self._n) if pgcd(self._n, i) == 1]
 
-    
-    
-                
-    
 
+        
+#additive group 
+
+class Z_n_Z:
+    def __init__(self, n):
+        self._n = n 
+        self._classes_equivalences = []        
+    @property 
+    def n(self):
+        return self._n
+    
+    @property
+    def classes_equivalences(self):
+        return self._classes_equivalences
+    
+    @classes_equivalences.setter
+    def classes_equivalences(self, value):
+        self._classes_equivalences = [i for i in range(self._n)]
+    
+    def ordre_de_classe(self, value)->int:
+        if value>= 0 and value < self._n:
+            return self._n/pgcd(self._n, value)
+        else: 
+            value = value % self._n
+            return self._n/pgcd(self._n, value)
 
 def main():
-    print("Chapter 3 of group theory")
-    Z_3_Z = Z_n_N_x(3)
-    Z_3_Z.classes_equivalences = None #the calculation is done
-    print(Z_3_Z._classes_equivalences)
+    print("Try examples here")
+    
+    
 
 
 if __name__ == "__main__":
