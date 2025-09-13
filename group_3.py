@@ -77,7 +77,11 @@ class Z_n_Z:
 
 def main():
     print("Try examples here")
-    
+    Z_12_Z = Z_n_Z(12)
+    Z_12_Z.classes_equivalences = None 
+    for i in range(12):
+        if Z_12_Z.ordre_de_classe(i) == 12:
+            print(i)
     
 
 
