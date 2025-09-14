@@ -78,19 +78,21 @@ class Z_n_Z:
 def fermat_little_theorem(p:int)->list:
     list_of_valid = []
     if is_prime(p):
-        for i in range(p*2):
-            if pgcd(p, i) == 1:
+        for i in range(p):
+            if pgcd(p, i) == 1 and (i**(p-1) % p) == 1 :
                 list_of_valid.append(i)
+        return list_of_valid
     else: 
         raise Exception("The element needs to be prime! ")
+
 def main():
     print("Try examples here")
-    Z_12_Z = Z_n_Z(12)
-    Z_12_Z.classes_equivalences = None 
-    for i in range(12):
-        if Z_12_Z.ordre_de_classe(i) == 12:
-            print(i)
-    print(indicatrice_euler(18))
+    # Z_12_Z = Z_n_Z(12)
+    # Z_12_Z.classes_equivalences = None 
+    # for i in range(12):
+    #     if Z_12_Z.ordre_de_classe(i) == 12:
+    #         print(i)
+    # print(indicatrice_euler(18))
     print(fermat_little_theorem(17))
 
 
