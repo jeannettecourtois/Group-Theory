@@ -82,7 +82,7 @@ def main():
     for i in range(12):
         if Z_12_Z.ordre_de_classe(i) == 12:
             print(i)
-    
+    print(indicatrice_euler(18))
 
 
 if __name__ == "__main__":
