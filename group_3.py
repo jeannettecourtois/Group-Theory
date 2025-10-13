@@ -93,7 +93,7 @@ def main():
     #     if Z_12_Z.ordre_de_classe(i) == 12:
     #         print(i)
     # print(indicatrice_euler(18))
-    print(fermat_little_theorem(17))
+    print(indicatrice_euler(2))
 
 
 
